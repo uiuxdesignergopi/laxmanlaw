@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathlavath Laxman | Advocate | Telangana High Court</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0A5FFF;
+            --primary-blue-dark: #084BCC;
+            --accent-purple: #8A2BE2;
+            --accent-purple-light: #9B42F5;
+            --dark-bg: #0A0A0F;
+            --dark-surface: #151520;
+            --dark-card: #1E1E2E;
+            --light-text: #F0F0F5;
+            --medium-text: #B8B8CC;
+            --border-color: #2A2A3A;
+            --serif-font: 'Crimson Text', serif;
+            --sans-font: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--sans-font);
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: var(--serif-font);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--accent-purple));
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            font-family: var(--sans-font);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-blue-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(10, 95, 255, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--light-text);
+            border: 2px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1DA851;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            background-color: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(42, 42, 58, 0.5);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--serif-font);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo-highlight {
+            color: var(--primary-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: var(--medium-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-blue);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light-text);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(10, 10, 15, 0.9) 30%, rgba(10, 10, 15, 0.7) 70%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-question {
+            font-size: 4.5rem;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s forwards 0.3s;
+        }
+
+        .hero-name {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s forwards 0.6s;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--medium-text);
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s forwards 0.9s;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s forwards 1.2s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Strategic Positioning */
+        .strategic-positioning {
+            background-color: var(--dark-surface);
+        }
+
+        .positioning-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .positioning-statement {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.3;
+        }
+
+        .positioning-subtext {
+            font-size: 1.1rem;
+            color: var(--medium-text);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Practice Focus */
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .practice-card {
+            background-color: var(--dark-card);
+            padding: 40px 30px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-blue);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .practice-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-left-color: var(--accent-purple);
+        }
+
+        .practice-icon {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .practice-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .practice-card p {
+            color: var(--medium-text);
+        }
+
+        /* Credentials */
+        .credentials-section {
+            background-color: var(--dark-surface);
+        }
+
+        .credentials-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+
+        .education-list {
+            list-style: none;
+        }
+
+        .education-list li {
+            margin-bottom: 25px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .education-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .court-focus {
+            background-color: var(--dark-card);
+            padding: 40px;
+            border-radius: 8px;
+            border-top: 4px solid var(--accent-purple);
+        }
+
+        .court-focus h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+        }
+
+        .court-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .court-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .court-list i {
+            color: var(--accent-purple);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Languages */
+        .languages-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .language-card {
+            background-color: var(--dark-card);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 180px;
+            transition: transform 0.3s ease;
+        }
+
+        .language-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .language-card.primary {
+            border-bottom: 4px solid var(--primary-blue);
+        }
+
+        .language-card.secondary {
+            border-bottom: 4px solid var(--accent-purple);
+        }
+
+        .language-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+
+        .language-card.primary .language-icon {
+            color: var(--primary-blue);
+        }
+
+        .language-card.secondary .language-icon {
+            color: var(--accent-purple);
+        }
+
+        .language-name {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .language-status {
+            color: var(--medium-text);
+            font-size: 0.9rem;
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            background-color: var(--dark-surface);
+        }
+
+        .testimonials-container {
+            max-width: 800px;
+            margin: 60px auto 0;
+        }
+
+        .testimonial-card {
+            background-color: var(--dark-card);
+            padding: 40px;
+            border-radius: 8px;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 5rem;
+            color: var(--primary-blue);
+            opacity: 0.3;
+            font-family: var(--serif-font);
+        }
+
+        .testimonial-text {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-blue);
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: var(--medium-text);
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-surface) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--primary-blue) 0%, transparent 70%);
+            top: -150px;
+            right: -150px;
+            opacity: 0.1;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--accent-purple) 0%, transparent 70%);
+            bottom: -150px;
+            left: -150px;
+            opacity: 0.1;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            color: var(--medium-text);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-card);
+            padding-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+        }
+
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-list i {
+            color: var(--primary-blue);
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding: 30px 0;
+            text-align: center;
+            color: var(--medium-text);
+            font-size: 0.9rem;
+        }
+
+        .disclaimer {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-question {
+                font-size: 3.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--dark-surface);
+                flex-direction: column;
+                padding: 20px;
+                gap: 20px;
+                border-top: 1px solid var(--border-color);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-question {
+                font-size: 2.8rem;
+            }
+            
+            .hero-name {
+                font-size: 2rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .positioning-statement {
+                font-size: 1.8rem;
+            }
+            
+            .cta-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 70px 0;
+            }
+            
+            .hero-question {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .positioning-statement {
+                font-size: 1.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* Scroll animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Pathlavath <span class="logo-highlight">Laxman</span></a>
+            <nav>
+                <div class="nav-links" id="navLinks">
+                    <a href="#strategic">Strategy</a>
+                    <a href="#practice">Practice Areas</a>
+                    <a href="#credentials">Credentials</a>
+                    <a href="#languages">Languages</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-question">Is your defense strategy prepared for what the prosecution will present?</h1>
+                <h2 class="hero-name">Pathlavath Laxman</h2>
+                <p class="hero-subtitle">Advocate · Telangana High Court</p>
+                <div class="hero-cta">
+                    <a href="tel:+918897489883" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Call Now</a>
+                    <a href="https://wa.me/918897489883" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Positioning -->
+    <section class="section strategic-positioning" id="strategic">
+        <div class="container">
+            <div class="positioning-content fade-in">
+                <h2 class="section-title">Strategic Approach</h2>
+                <p class="positioning-statement">I don't just argue cases. I deconstruct prosecution strategies, anticipate judicial scrutiny, and build impregnable legal defenses.</p>
+                <p class="positioning-subtext">Based in Hyderabad with primary practice at Telangana High Court, I provide aggressive, tactical representation for clients who require more than just legal counsel.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Focus -->
+    <section class="section" id="practice">
+        <div class="container">
+            <h2 class="section-title">Strategic Practice Focus</h2>
+            <div class="practice-grid">
+                <div class="practice-card fade-in">
+                    <div class="practice-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>Criminal Defense Strategy</h3>
+                    <p>Strategic defense preparation for serious criminal charges with focus on evidentiary challenges and procedural countermeasures.</p>
+                </div>
+                <div class="practice-card fade-in">
+                    <div class="practice-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>High Court Litigation</h3>
+                    <p>Appellate advocacy and original jurisdiction matters before the Telangana High Court with emphasis on constitutional arguments.</p>
+                </div>
+                <div class="practice-card fade-in">
+                    <div class="practice-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Corporate Legal Defense</h3>
+                    <p>Representation for corporate entities in regulatory disputes, white-collar defense, and complex commercial litigation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials & Court Focus -->
+    <section class="section credentials-section" id="credentials">
+        <div class="container">
+            <h2 class="section-title">Credentials & Court Focus</h2>
+            <div class="credentials-content">
+                <div class="education fade-in">
+                    <h3>Education & Qualifications</h3>
+                    <ul class="education-list">
+                        <li>BA LLB (Law Degree)</li>
+                        <li>LLM (Master of Laws)</li>
+                        <li>Diploma in Advanced Legal Practice (NALSAR)</li>
+                        <li>Certified in Trial Advocacy</li>
+                        <li>Continuing Education in Constitutional Law</li>
+                    </ul>
+                </div>
+                <div class="court-focus fade-in">
+                    <h3>Court Practice & Jurisdiction</h3>
+                    <p>Primary practice established at the Telangana High Court with extensive experience in complex litigation and appellate matters.</p>
+                    <ul class="court-list">
+                        <li><i class="fas fa-landmark"></i> <strong>Primary:</strong> Telangana High Court (TSHC)</li>
+                        <li><i class="fas fa-gavel"></i> <strong>Secondary:</strong> Hyderabad District Courts</li>
+                        <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Dilsukhnagar, Hyderabad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="section" id="languages">
+        <div class="container">
+            <h2 class="section-title">Languages of Practice</h2>
+            <div class="languages-container">
+                <div class="language-card primary fade-in">
+                    <div class="language-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="language-name">Telugu</h3>
+                    <p class="language-status">Primary & Native</p>
+                </div>
+                <div class="language-card secondary fade-in">
+                    <div class="language-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="language-name">English</h3>
+                    <p class="language-status">Court & Documentation</p>
+                </div>
+                <div class="language-card secondary fade-in">
+                    <div class="language-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="language-name">Hindi</h3>
+                    <p class="language-status">Client Consultation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials-section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Client Perspectives</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">"Mr. Laxman's strategic approach to my high-stakes corporate litigation was exceptional. He anticipated every move from the opposing counsel and built an impregnable defense that resulted in a favorable settlement."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SK</div>
+                        <div class="author-info">
+                            <h4>Sanjay Kumar</h4>
+                            <p>Business Executive, Hyderabad</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">"Facing serious criminal charges, I needed an advocate who would fight aggressively. Pathlavath Laxman not only understood the legal complexities but also prepared a defense that challenged the prosecution's evidence at every turn."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">VR</div>
+                        <div class="author-info">
+                            <h4>Vikram Reddy</h4>
+                            <p>Client, Telangana High Court Case</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" id="contact">
+        <div class="container">
+            <div class="cta-content fade-in">
+                <h2 class="cta-title">Ready to Build Your Defense Strategy?</h2>
+                <p class="cta-subtitle">Contact for a confidential case evaluation. I handle only select cases to ensure each client receives strategic, focused representation.</p>
+                <div class="cta-buttons">
+                    <a href="tel:+919876543210" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Call Now: +91 88974 89883</a>
+                    <a href="https://wa.me/919876543210" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Consultation</a>
+                    <a href="mailto:contact@pathlavathlaxman.com" class="btn btn-secondary"><i class="fas fa-envelope"></i> Email Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Pathlavath Laxman</h3>
+                    <p>Advocate practicing primarily at Telangana High Court with strategic focus on criminal defense, appellate litigation, and corporate legal defense.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Information</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Dilsukhnagar, Hyderabad, Telangana</li>
+                        <li><i class="fas fa-phone-alt"></i> +91 88974 89883</li>
+                        <li><i class="fas fa-envelope"></i> contact@pathlavathlaxman.com</li>
+                        <li><i class="fas fa-clock"></i> By Appointment Only</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Primary Jurisdiction</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-landmark"></i> Telangana High Court (TSHC)</li>
+                        <li><i class="fas fa-gavel"></i> Hyderabad District Courts</li>
+                        <li><i class="fas fa-language"></i> Telugu, English, Hindi</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="disclaimer">
+                    <p><strong>Disclaimer:</strong> This website is for informational purposes only and does not constitute legal advice. Visiting this site or contacting Advocate Pathlavath Laxman does not establish an attorney-client relationship. Confidential information should not be sent without prior authorization.</p>
+                    <p style="margin-top: 15px;">© 2023 Pathlavath Laxman. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Scroll animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+        
+        // Check on load and scroll
+        window.addEventListener('load', fadeInOnScroll);
+        window.addEventListener('scroll', fadeInOnScroll);
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
